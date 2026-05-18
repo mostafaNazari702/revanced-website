@@ -30,7 +30,7 @@ async function fetchJsonServer<T>(
 	fetchFn: typeof fetch = fetch
 ): Promise<T> {
 	const url = buildServerUrl(endpoint);
-	const response = await fetchFn(url, { cache: 'no-store' });
+	const response = await fetchFn(url);
 
 	if (!response.ok) {
 		throw new Error(`API error: ${response.status} ${response.statusText}`);
@@ -68,5 +68,5 @@ export async function fetchAnnouncements(fetchFn?: typeof fetch): Promise<Announ
 export async function fetchLatestAnnouncements(
 	fetchFn?: typeof fetch
 ): Promise<TaggedLatestAnnouncements[]> {
-	return fetchJsonServer('announcement/latest', LatestAnnouncementsSchema, fetchFn);
+	return fetchJsonServer('announcements/latest', LatestAnnouncementsSchema, fetchFn);
 }

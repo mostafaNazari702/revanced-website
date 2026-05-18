@@ -37,7 +37,6 @@ async function fetchJson<T>(
 	signal?: AbortSignal
 ): Promise<T> {
 	const response = await fetch(buildUrl(endpoint), {
-		cache: 'no-store',
 		...(signal ? { signal } : {})
 	});
 	if (!response.ok) {
