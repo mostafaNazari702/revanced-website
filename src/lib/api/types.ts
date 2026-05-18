@@ -39,6 +39,7 @@ export type About = {
 	socials: Social[];
 	donations: Donations;
 	status: string;
+	fallback_api_url?: string | null;
 };
 
 export type GpgKey = {

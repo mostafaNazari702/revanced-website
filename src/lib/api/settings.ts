@@ -1,6 +1,7 @@
 import { browser } from '$app/environment';
 import {
 	RV_API_URL,
+	RV_API_URL_FALLBACK,
 	RV_STATUS_URL,
 	RV_EMAIL,
 	RV_DMCA_GUID,
@@ -11,6 +12,7 @@ const STATUS_KEY = 'revanced_status_url';
 const EMAIL_KEY = 'revanced_email';
 
 export const DEFAULT_API_URL = RV_API_URL;
+export const DEFAULT_API_URL_FALLBACK = RV_API_URL_FALLBACK;
 export const DEFAULT_STATUS_URL = RV_STATUS_URL;
 export const DEFAULT_EMAIL = RV_EMAIL;
 export const DMCA_GUID = RV_DMCA_GUID;

@@ -40,7 +40,8 @@ export const AboutSchema = z.object({
 	contact: ContactSchema,
 	socials: z.array(SocialSchema),
 	donations: DonationsSchema,
-	status: z.string()
+	status: z.string(),
+	fallback_api_url: z.url().nullable().optional()
 });
 
 export const GpgKeySchema = z.object({
